@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Desperdício Alimentar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Estilo simples e bonito -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+    h2 {
+      color: #2e7d32;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+    footer {
+      background: #e0e0e0;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Monitorização do Desperdício Alimentar</h1>
+  <p>Acompanhamento mensal do desperdício alimentar</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>Enquadramento</h2>
+    <p>
+      <!-- ✏️ ESCREVES O TEU TEXTO AQUI -->
+      Este site apresenta dados mensais relativos ao desperdício alimentar,
+      permitindo analisar tendências e apoiar decisões informadas.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Dashboard</h2>
+    <p>
+      Os dados apresentados abaixo são atualizados automaticamente
+      com base nos registos mensais.
+    </p>
+
+    <!-- DASHBOARD -->
+    <iframe id="dashboard"></iframe>
+  </div>
+
+  <div class="card">
+    <h2>Conclusões</h2>
+    <p>
+      <!-- ✏️ ESCREVES O TEU TEXTO AQUI -->
+      A análise contínua do desperdício alimentar é essencial para
+      promover práticas mais sustentáveis.
+    </p>
+  </div>
+
+</section>
+
+<footer>
+  Projeto institucional • Atualização automática mensal
+</footer>
+
+<script>
+  
+  const SHEET_URL = "https://lookerstudio.google.com/reporting/e634e647-6528-4db5-835c-c31240f8c447";
+
+  // Não mexer abaixo
+  document.getElementById("dashboard").src = SHEET_URL;
+</script>
+
+</body>
+</html>
