@@ -135,30 +135,24 @@
 
 </script>
 <script>
-async function carregarPesoTotal() {
+async function carregarTotal() {
 
-  const url = "https://docs.google.com/spreadsheets/d/1JvenGE2MxW0iFn-0sSAgAVcKZ7h_gANfH0sYD1dBVd0/edit?gid=247645398#gid=247645398" ;
+  const url =
+  "https://docs.google.com/spreadsheets/d/1JvenGE2MxW0iFn-0sSAgAVcKZ7h_gANfH0sYD1dBVd0/gviz/tq?tqx=out:json&gid=247645398";
 
-  const resposta = await fetch(url);
-  const texto = await resposta.text();
+  const res = await fetch(url);
+  const txt = await res.text();
 
-  const linhas = texto.split("\n");
+  const json = JSON.parse(txt.substring(47).slice(0, -2));
 
-  let total = 0;
-
-  for (let i = 1; i < linhas.length; i++) {
-    const colunas = linhas[i].split(",");
-
-    const peso = parseFloat(colunas[1]); // coluna B
-
-    if (!isNaN(peso)) total += peso;
-  }
+  // 👉 B2 = linha 1 coluna 1
+  const valor = json.table.rows[1].c[1].v;
 
   document.getElementById("totalPeso").textContent =
-    total.toFixed(1) + " toneladas";
+    valor + " toneladas";
 }
 
-carregarPesoTotal();
+carregarTotal();
 </script>
 </body>
 </html>
