@@ -150,7 +150,8 @@ async function carregarB16() {
 
   const valor = json.table.rows[0].c[0].v;
 
-  document.getElementById("valor-b16").innerText = valor;
+  document.getElementById("valor-b16").innerText =
+  Number(valor).toFixed(2) + " toneladas";
 }
 
 carregarB16();
