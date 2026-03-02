@@ -100,17 +100,7 @@
     </iframe>
   
   </div>
- <div class="card">
-    <h2>Peso total recolhido</h2>
 
-    <p style="font-size:48px; font-weight:bold; text-align:center;" id="totalPeso">
-      A carregar...
-    </p>
-
-    <p style="text-align:center; color:#666;">
-      Somatório automático a partir dos registos
-    </p>
-  </div>
   <div class="card">
     <h2>Parceria</h2>
     <p>
@@ -134,25 +124,6 @@
 <script>
 
 </script>
-<script>
-async function carregarTotal() {
 
-  const url =
-  "https://docs.google.com/spreadsheets/d/1JvenGE2MxW0iFn-0sSAgAVcKZ7h_gANfH0sYD1dBVd0/gviz/tq?tqx=out:json&gid=247645398";
-
-  const res = await fetch(url);
-  const txt = await res.text();
-
-  const json = JSON.parse(txt.substring(47).slice(0, -2));
-
-  // 👉 B16 = linha 15, coluna 1
-  const valor = json.table.rows[15].c[1].v;
-
-  document.getElementById("totalPeso").textContent =
-    valor + " toneladas";
-}
-
-carregarTotal();
-</script>
 </body>
 </html>
