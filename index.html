@@ -145,8 +145,8 @@ async function carregarTotal() {
 
   const json = JSON.parse(txt.substring(47).slice(0, -2));
 
-  // 👉 B2 = linha 1 coluna 1
-  const valor = json.table.rows[1].c[1].v;
+  // 👉 B16 = linha 15, coluna 1
+  const valor = json.table.rows[15].c[1].v;
 
   document.getElementById("totalPeso").textContent =
     valor + " toneladas";
