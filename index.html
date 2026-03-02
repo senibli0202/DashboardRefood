@@ -12,24 +12,20 @@
       background: #f5f7fa;
       color: #333;
     }
-
     header {
       background: #2e7d32;
       color: white;
       padding: 30px;
       text-align: center;
     }
-
     section {
       max-width: 1000px;
       margin: auto;
       padding: 30px;
     }
-
     h2 {
       color: #2e7d32;
     }
-
     .card {
       background: white;
       padding: 20px;
@@ -37,33 +33,11 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       margin-bottom: 30px;
     }
-
     iframe {
       width: 100%;
       height: 500px;
       border: none;
     }
-
-    /* ===== QUADRO DO PESO ===== */
-
-    .peso-box {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .peso-box iframe {
-      width: 100%;
-      height: 90px;
-      border: none;
-    }
-
-    .unidade {
-      font-size: 22px;
-      font-weight: bold;
-      color: #2e7d32;
-      margin-top: 10px;
-    }
-
     .parcerias {
       display: flex;
       gap: 30px;
@@ -71,13 +45,11 @@
       align-items: center;
       margin-top: 20px;
     }
-
     .parcerias img {
       max-width: 180px;
       height: auto;
       border-radius: 8px;
     }
-
     footer {
       background: #e0e0e0;
       text-align: center;
@@ -99,51 +71,59 @@
   <div class="card">
     <h2>Colaboração Academia Militar - REFOOD Falagueira</h2>
     <p>
-      No âmbito do programa Iron Pitch da Academia Militar, foi desenvolvido o Projeto de Doação e Recolha de Excedentes Alimentares entre a Academia Militar e a REFOOD da Falagueira, com o objetivo de implementar um processo estruturado de doação diária dos excedentes alimentares produzidos.
+      No âmbito do programa Iron Pitch da Academia Militar, no contexto do Curso de Administração Militar, foi desenvolvido o Projeto de Doação e Recolha de Excedentes Alimentares entre a Academia Militar e a REFOOD da Falagueira, com o objetivo de implementar um processo estruturado de doação diária dos excedentes alimentares produzidos. Esta iniciativa procura reduzir o desperdício alimentar, promover a responsabilidade social e garantir que alimentos próprios para consumo sejam encaminhados de forma eficaz para apoio a pessoas em situação de vulnerabilidade.
     </p>
+    
   </div>
-
-  <!-- ===== QUADRO DO PESO TOTAL ===== -->
-
-  <div class="card">
-    <h2>Peso Total Recolhido</h2>
-
-    <div class="peso-box">
-      <iframe 
-        src="https://docs.google.com/spreadsheets/d/1JvenGE2MxW0iFn-0sSAgAVcKZ7h_gANfH0sYD1dBVd0/edit?gid=247645398#gid=247645398">
-      </iframe>
-
-      <p class="unidade">toneladas</p>
-    </div>
-  </div>
-
-  <!-- ===== DASHBOARD ===== -->
-
+  
   <div class="card">
     <h2>Dashboard</h2>
+    <p>
+      Os dados apresentados abaixo são atualizados
+      com base nos registos diários.
+    </p>
 
     <iframe 
-      src="https://lookerstudio.google.com/embed/reporting/e634e647-6528-4db5-835c-c31240f8c447/page/tJPnF"
-      allowfullscreen>
-    </iframe>
-  </div>
+      id="dashboard"
+      width="500"  
+      height="550"   
+      src="https://lookerstudio.google.com/embed/reporting/e634e647-6528-4db5-835c-c31240f8c447/page/tJPnF" 
+      frameborder="0" 
+      style="border:0" 
+      allowfullscreen 
+      sandbox="allow-storage-access-by-user-activation 
+      allow-scripts 
+      allow-same-origin
+      allow-popups 
+      allow-popups-to-escape-sandbox">
 
-  <!-- ===== PARCERIAS ===== -->
+    </iframe>
+  
+  </div>
 
   <div class="card">
     <h2>Parceria</h2>
+    <p>
+      Juntos a transformar excedentes em apoio alimentar.
+    </p>
 
     <div class="parcerias">
-      <img src="IMG-20260203-WA0215.jpg" alt="parceiro 1">
-      <img src="IMG-20260203-WA0216.jpg" alt="parceiro 2">
+      <img src="IMG-20260203-WA0215.jpg"
+  alt="parceiro 1">
+      <img src="IMG-20260203-WA0216.jpg"
+  alt="parceiro 2">
     </div>
   </div>
-
+  
 </section>
 
 <footer>
   Projeto institucional • Atualização mensal
 </footer>
+  
+<script>
+
+</script>
 
 </body>
 </html>
