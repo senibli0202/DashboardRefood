@@ -134,6 +134,31 @@
 <script>
 
 </script>
+<script>
+async function carregarPesoTotal() {
 
+  const url = "https://docs.google.com/spreadsheets/d/1JvenGE2MxW0iFn-0sSAgAVcKZ7h_gANfH0sYD1dBVd0/export?format=csv&gid=247645398";
+
+  const resposta = await fetch(url);
+  const texto = await resposta.text();
+
+  const linhas = texto.split("\n");
+
+  let total = 0;
+
+  for (let i = 1; i < linhas.length; i++) {
+    const colunas = linhas[i].split(",");
+
+    const peso = parseFloat(colunas[1]); // coluna B
+
+    if (!isNaN(peso)) total += peso;
+  }
+
+  document.getElementById("totalPeso").textContent =
+    total.toFixed(1) + " toneladas";
+}
+
+carregarPesoTotal();
+</script>
 </body>
 </html>
